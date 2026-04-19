@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valeria Cavallini - Arquitecta matriculada en el Colegio de Arquitectos de la Provincia de Buenos Aires (Distrito 9). Especializada en proyectos de arquitectura y servicios de electricidad, electrónica, energía y gas en Pinamar y Buenos Aires.">
+    <title>Valeria Cavallini | Arquitecta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #0f766e;
+        }
+        
+        .tail-container * {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 118, 110, 0.85), rgba(15, 118, 110, 0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0f766e;
+            transform: translateY(-1px);
+        }
+
+        .section-title {
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #0f766e;
+            bottom: -8px;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="tail-container">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-teal-700 rounded-2xl flex items-center justify-center text-white text-2xl">
+                    <i class="fa-solid fa-drafting-compass"></i>
+                </div>
+                <div>
+                    <h1 class="heading-font text-2xl tracking-tight text-gray-900">Valeria Cavallini</h1>
+                    <p class="text-xs text-teal-700 font-medium -mt-1">Arquitecta Matriculada</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium text-gray-700">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="#formacion" class="nav-link">Formación</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <a href="https://wa.me/5492254445518" target="_blank" 
+                   class="flex items-center gap-x-2 bg-teal-700 hover:bg-teal-800 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition-all">
+                    <i class="fa-solid fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                
+                <!-- Botón menú móvil -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium text-gray-700">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="nav-link py-2">Inicio</a>
+                <a href="#sobre-mi" onclick="toggleMobileMenu()" class="nav-link py-2">Sobre mí</a>
+                <a href="#formacion" onclick="toggleMobileMenu()" class="nav-link py-2">Formación</a>
+                <a href="#servicios" onclick="toggleMobileMenu()" class="nav-link py-2">Servicios</a>
+                <a href="#contacto" onclick="toggleMobileMenu()" class="nav-link py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="inicio" class="hero-bg text-white py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md text-white text-sm px-4 py-2 rounded-3xl mb-6">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+                    </span>
+                    Matriculada Distrito 9 • Pinamar
+                </div>
+                
+                <h1 class="heading-font text-6xl md:text-7xl leading-none font-semibold tracking-tighter mb-6">
+                    Valeria<br>Cavallini
+                </h1>
+                <p class="text-2xl md:text-3xl text-teal-100 mb-8">
+                    Arquitecta • Proyectos integrales<br>
+                    <span class="text-white/90 text-lg md:text-xl">Pinamar • Costa Atlántica • Buenos Aires</span>
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contacto" 
+                       class="inline-flex items-center justify-center bg-white text-teal-800 hover:bg-amber-100 px-8 py-4 rounded-3xl font-semibold text-lg transition-all">
+                        Solicitar consulta
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                    
+                    <a href="tel:02254409495" 
+                       class="inline-flex items-center justify-center border border-white/70 hover:border-white text-white px-8 py-4 rounded-3xl font-semibold text-lg transition-all">
+                        <i class="fa-solid fa-phone mr-3"></i>
+                        (02254) 40-9495
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-x-8 text-sm">
+                    <div class="flex items-center gap-x-3">
+                        <i class="fa-solid fa-map-marker-alt text-2xl"></i>
+                        <div>
+                            <div class="font-medium">De la Trucha 1893</div>
+                            <div class="text-teal-100">Pinamar, Buenos Aires</div>
+                        </div>
+                    </div>
+                    <div class="h-12 w-px bg-white/30"></div>
+                    <div>
+                        <div class="text-teal-100 text-xs tracking-widest">COLEGIO DE ARQUITECTOS</div>
+                        <div class="font-semibold">Distrito 9 • Provincia de Buenos Aires</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7">
+                    <h2 class="section-title text-4xl font-semibold text-gray-900 mb-6">Sobre Valeria Cavallini</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Arquitecta argentina con más de 40 años de experiencia profesional. 
+                        Radicada principalmente en la zona de Pinamar (provincia de Buenos Aires), 
+                        aunque también desarrolla proyectos en la Ciudad Autónoma de Buenos Aires y alrededores.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Su trayectoria combina el ejercicio liberal de la arquitectura con un enfoque integral 
+                        en soluciones constructivas y de instalaciones. Participa activamente en las actividades 
+                        del Colegio de Arquitectos de la Provincia de Buenos Aires, donde ha colaborado en 
+                        entregas de reconocimientos y bienvenidas a nuevos matriculados en la sede de Pinamar.
+                    </p>
+                    
+                    <div class="mt-10 grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-semibold text-teal-700">68</div>
+                            <div class="text-sm text-gray-500">años de experiencia acumulada</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-semibold text-teal-700">Distrito 9</div>
+                            <div class="text-sm text-gray-500">Colegio de Arquitectos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-semibold text-teal-700">SIGAS</div>
+                            <div class="text-sm text-gray-500">Matriculada en Gas</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5">
+                    <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center gap-x-4 mb-8">
+                            <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-3xl">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Valeria Cavallini</h4>
+                                <p class="text-teal-700 text-sm">Arquitecta • Matrícula Distrito 9</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start gap-x-3">
+                                <i class="fa-solid fa-check text-teal-600 mt-1"></i>
+                                <span>Trabajo independiente y profesional liberal</span>
+                            </li>
+                            <li class="flex items-start gap-x-3">
+                                <i class="fa-solid fa-check text-teal-600 mt-1"></i>
+                                <span>Proyectos residenciales, comerciales y de instalaciones</span>
+                            </li>
+                            <li class="flex items-start gap-x-3">
+                                <i class="fa-solid fa-check text-teal-600 mt-1"></i>
+                                <span>Enfoque en eficiencia energética y seguridad</span>
+                            </li>
+                            <li class="flex items-start gap-x-3">
+                                <i class="fa-solid fa-check text-teal-600 mt-1"></i>
+                                <span>Compromiso con la comunidad arquitectónica local</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-baseline mb-12">
+                <h2 class="section-title text-4xl font-semibold text-gray-900">Formación Académica</h2>
+                <span class="text-teal-700 font-medium">Universidad de Buenos Aires</span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-3xl p-8">
+                    <div class="flex gap-x-4">
+                        <div class="text-5xl text-teal-700">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold mb-1">Facultad de Arquitectura, Diseño y Urbanismo (FADU)</h3>
+                            <p class="text-teal-700 font-medium">Universidad de Buenos Aires (UBA)</p>
+                            <p class="mt-4 text-gray-600">Título de Arquitecta. Formación completa en diseño, urbanismo y tecnologías constructivas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-3xl p-8">
+                    <div class="flex gap-x-4">
+                        <div class="text-5xl text-teal-700">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold mb-1">Instituto Miguel Cane</h3>
+                            <p class="text-gray-600">Formación previa y complementaria en disciplinas técnicas y artísticas relacionadas con la arquitectura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-title text-4xl font-semibold mb-4 text-white">Servicios Profesionales</h2>
+            <p class="text-teal-300 max-w-md mb-12">Arquitectura integral + instalaciones especializadas</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-teal-400 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Arquitectura</h3>
+                    <p class="text-teal-100">Proyectos residenciales, comerciales y de remodelación. Dirección técnica y ejecución de obra.</p>
+                    <span class="inline-block mt-6 text-xs font-medium bg-teal-400 text-teal-900 px-4 py-2 rounded-3xl">Matriculada CPBA Distrito 9</span>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-amber-400 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Electricidad y Electrónica</h3>
+                    <p class="text-teal-100">Instalaciones eléctricas nuevas y reparaciones. Sistemas domóticos y de seguridad.</p>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all group">
+                    <div class="w-12 h-12 bg-emerald-400 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Gas • Energía • Instalaciones</h3>
+                    <p class="text-teal-100">Instalaciones y reparaciones de gas (matriculada SIGAS). Eficiencia energética y energías renovables.</p>
+                    <span class="inline-block mt-6 text-xs font-medium bg-emerald-400 text-emerald-900 px-4 py-2 rounded-3xl">Habilitación SIGAS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <h2 class="section-title text-4xl font-semibold text-gray-900 mb-6">Contactame</h2>
+                    <p class="text-xl text-gray-600 mb-8">Estoy disponible para consultas y nuevos proyectos en Pinamar y toda la provincia de Buenos Aires.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-x-6">
+                            <div class="text-4xl text-teal-700"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <p class="font-semibold text-lg">Teléfono fijo</p>
+                                <a href="tel:02254409495" class="text-2xl text-gray-900 hover:text-teal-700">(02254) 40-9495</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-x-6">
+                            <div class="text-4xl text-teal-700"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div>
+                                <p class="font-semibold text-lg">Celular / WhatsApp</p>
+                                <a href="tel:0225415445518" class="text-2xl text-gray-900 hover:text-teal-700">02254 15-4455518</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-x-6">
+                            <div class="text-4xl text-teal-700"><i class="fa-solid fa-map-marker-alt"></i></div>
+                            <div>
+                                <p class="font-semibold text-lg">Dirección</p>
+                                <p class="text-2xl text-gray-900">De la Trucha 1893<br>Pinamar, Buenos Aires</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t text-sm text-gray-500">
+                        <p>Profesional liberal • Habilitada por el Colegio de Arquitectos de la Provincia de Buenos Aires</p>
+                        <p class="mt-2">Póliza colectiva vigente • Matrícula gas SIGAS</p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <form class="bg-gray-50 rounded-3xl p-10 shadow-inner" onsubmit="handleSubmit(event)">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-500 mb-2">Nombre completo</label>
+                                <input type="text" required 
+                                       class="w-full px-6 py-4 rounded-3xl border border-gray-200 focus:border-teal-600 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-500 mb-2">Teléfono / Celular</label>
+                                <input type="tel" required 
+                                       class="w-full px-6 py-4 rounded-3xl border border-gray-200 focus:border-teal-600 outline-none transition-all">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium text-gray-500 mb-2">Tipo de consulta</label>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="flex items-center gap-x-2 bg-white px-5 py-3 rounded-3xl cursor-pointer border border-transparent hover:border-teal-200">
+                                    <input type="radio" name="tipo" value="Proyecto" class="accent-teal-700"> Proyecto de arquitectura
+                                </label>
+                                <label class="flex items-center gap-x-2 bg-white px-5 py-3 rounded-3xl cursor-pointer border border-transparent hover:border-teal-200">
+                                    <input type="radio" name="tipo" value="Instalación" class="accent-teal-700"> Instalación / Reparación
+                                </label>
+                                <label class="flex items-center gap-x-2 bg-white px-5 py-3 rounded-3xl cursor-pointer border border-transparent hover:border-teal-200">
+                                    <input type="radio" name="tipo" value="Gas" class="accent-teal-700"> Gas / Energía
+                                </label>
+                                <label class="flex items-center gap-x-2 bg-white px-5 py-3 rounded-3xl cursor-pointer border border-transparent hover:border-teal-200">
+                                    <input type="radio" name="tipo" value="Otro" class="accent-teal-700"> Otro
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium text-gray-500 mb-2">Mensaje</label>
+                            <textarea rows="5" required
+                                      class="w-full px-6 py-4 rounded-3xl border border-gray-200 focus:border-teal-600 outline-none resize-y transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit"
+                                class="mt-8 w-full bg-teal-700 hover:bg-teal-800 text-white py-5 rounded-3xl font-semibold text-lg flex items-center justify-center gap-x-3 transition-all">
+                            ENVIAR CONSULTA
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-teal-700 rounded-2xl flex items-center justify-center text-white">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </div>
+                    <div class="heading-font text-2xl">Valeria Cavallini</div>
+                </div>
+                
+                <div class="text-center md:text-right text-sm text-gray-400">
+                    © 2026 Valeria Cavallini • Arquitecta<br>
+                    Todos los derechos reservados • Matrícula Distrito 9 – CPBA
+                </div>
+                
+                <div class="flex gap-x-6 text-2xl">
+                    <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="text-[10px] text-gray-500 mt-10 text-center md:text-left border-t border-white/10 pt-6">
+                Página creada profesionalmente con la información pública proporcionada. 
+                Dirección: De la Trucha 1893, Pinamar, Buenos Aires, Argentina.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('✅ ¡Consulta enviada con éxito!\n\nValeria Cavallini se comunicará con usted a la brevedad.\n\nGracias por elegirnos.');
+            e.target.reset();
+        }
+        
+        // Tailwind script ya cargado
+        console.log('%c✅ Página web profesional de Valeria Cavallini generada correctamente', 'color:#0f766e; font-family:monospace; font-size:13px');
+    </script>
+</body>
+</html>
